@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>sysverb_insert</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition>new ButtonDisplayRules().x08BAlwaysShow();</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Submit</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[var sl=new x_navyn_badges.BadgeLibrary();
+var user=gs.getUser().getDisplayName();
+var userEmail=gs.getUser().getEmail();
+var stamp=new GlideDateTime().getDisplayValue();
+var stuser=' '+user+' '+stamp+'<br/>';
+var id=gs.getUserID();
+var usr=new GlideRecord('sys_user');
+current.u_changed = new GlideDateTime();
+usr.get('sys_id', id);
+var badge=new GlideRecord('x_navyn_badges_badge_inventory');
+if (current.u_status.u_status_id==7070)//Badge Is Ready for Pickup
+	current.badge_approved_date=new GlideDate();
+if (current.u_status.u_status_id.toString().trim()=='7051') //Badge Returned to 08B Security
+	{
+	current.actual_badge_return_date=new GlideDate();
+	if (badge.get('asset_tag', current.selected_badge.toString().trim()))
+		{
+		badge.addQuery('asset_tag', current.selected_badge.trim());
+		badge.query();
+		badge.next();
+		badge.badge_history+="Badge #"+badge.asset_tag.getDisplayValue()+" returned. Processed by"+stuser;
+		badge.checked_in=new GlideDate();
+		badge.checked_out='';
+		current.selected_badge='';
+		badge.issued=false;
+		badge.assigned_to='';
+		badge.issued_to='';
+		badge.update();
+		current.u_tasker_history+="Badge #"+badge.asset_tag.getDisplayValue()+" returned. Processed by"+stuser;
+	}
+}
+if (current.u_status.u_status_id.toString().trim()=='7071')//Badge Issued to Visitor
+	{
+	if (current.selected_badge.toString().trim()=='')
+		{
+		badge.addQuery('asset_tag', current.asset_tag.getDisplayValue().trim());
+		badge.query();
+		badge.next();
+		badge.checked_out=new GlideDate();
+		badge.issued=true;
+		usr=new GlideRecord('sys_user');
+		usr.get('user_name', current.sys_created_by);
+		badge.assigned_to=usr.sys_id;
+		badge.issued_to=current.first_name+" "+current.last_name;
+		current.selected_badge=badge.asset_tag.getDisplayValue();
+		current.badge_issue_date=new GlideDate();
+		
+		badge.badge_history+="Badge #"+badge.asset_tag.getDisplayValue()+" issued to "+badge.issued_to+". Processed by"+stuser;
+		badge.update();
+		current.u_tasker_history+="Badge #"+badge.asset_tag.getDisplayValue()+" issued to "+badge.issued_to+". Processed by"+stuser;
+		
+	}
+}
+current.update();
+sl.closeParentIfAllBadgesAreIssued(current);
+
+action.setRedirectURL('/x_navyn_badges_badging_request.do?sys_id='+current.parent);]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-05 22:23:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d3acdb5cdb056b00cf04fd0e0f96192d</sys_id>
+        <sys_mod_count>56</sys_mod_count>
+        <sys_name>Submit</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_ui_action_d3acdb5cdb056b00cf04fd0e0f96192d</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-07 15:06:59</sys_updated_on>
+        <table>x_navyn_badges_visitors</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

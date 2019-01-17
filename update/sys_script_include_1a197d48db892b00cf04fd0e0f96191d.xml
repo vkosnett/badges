@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_navyn_badges.StatusSelectionScripts</api_name>
+        <client_callable>true</client_callable>
+        <description>1a197d48db892b00cf04fd0e0f96191d&#13;
+	VisitorStatus: function()&#13;
+	BadgeSelection: function()</description>
+        <name>StatusSelectionScripts</name>
+        <script><![CDATA[var StatusSelectionScripts = Class.create();
+StatusSelectionScripts.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	//Default Status for visitors form if initiated by 08B Security
+	DefaultVisitorsStatus: function()
+	{
+	
+			return new x_navyn_badges.BadgeLibrary().getStatusDoc(7005);
+	},
+	
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	VisitorStatus: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		if (current.getValue('u_status')==null)
+			
+		return "u_form_it_is_on=x_navyn_badges_visitors";
+		
+		else
+			
+		return "u_form_it_is_on=x_navyn_badges_visitors^u_nstate=4^EQ";
+	
+		
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	BadgeSelection: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		if (current.getValue('selected_badge')==null)
+			{
+			return "issued=false^install_status=1^EQ";
+		}
+		else
+			{
+			return "asset_tag="+current.getValue("selected_badge");
+		}
+	},
+	type: 'StatusSelectionScripts'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-04 20:29:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1a197d48db892b00cf04fd0e0f96191d</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>StatusSelectionScripts</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_script_include_1a197d48db892b00cf04fd0e0f96191d</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-11 15:56:30</sys_updated_on>
+    </sys_script_include>
+</record_update>

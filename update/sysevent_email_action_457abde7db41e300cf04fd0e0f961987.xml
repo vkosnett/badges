@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>false</active>
+        <advanced_condition><![CDATA[	]]></advanced_condition>
+        <affected_field_on_event/>
+        <category display_value="Badges" name="Badges">f0aafde7db41e300cf04fd0e0f9619b1</category>
+        <collection>x_navyn_badges_badging_request</collection>
+        <condition table="x_navyn_badges_badging_request">u_status=ca95ec7fdb302b00cf04fd0e0f9619a1^EQ<item display_table="u_status" display_value="Submitted to 08 Security" endquery="false" field="u_status" goto="false" newquery="false" operator="=" or="false" value="ca95ec7fdb302b00cf04fd0e0f9619a1"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>multipart/mixed</content_type>
+        <description/>
+        <event_name>approval.cancelled</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <importance>high</importance>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>There is a new badge request. Please follow the link below and complete the request:&nbsp;</p>
+<p>${URI_REF}</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>There is a new Badge Request</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups name="08B SECURITY">4c4355addbf19b0071acf81d0f96197b</recipient_groups>
+        <recipient_users>846ec823db02220071acf81d0f961958</recipient_users>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>There is a new badge request</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-15 17:34:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>457abde7db41e300cf04fd0e0f961987</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>There is a new Badge Request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sysevent_email_action_457abde7db41e300cf04fd0e0f961987</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-10-24 19:51:35</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

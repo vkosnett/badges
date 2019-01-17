@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_tour_step">
+    <sys_embedded_tour_step action="INSERT_OR_UPDATE">
+        <action>false</action>
+        <action_event>next</action_event>
+        <action_target/>
+        <action_target_ref display_value="label.x_navyn_badges_badging_request.bad">033913b4dbcb634071acf81d0f96194f</action_target_ref>
+        <active>true</active>
+        <content><![CDATA[If you select a  "cleared" badge type, be prepared to submit the Social Security Number of the visitor on the next page]]></content>
+        <guide/>
+        <implicit>false</implicit>
+        <link/>
+        <name>Step 1</name>
+        <options/>
+        <order>1</order>
+        <placement>bottom</placement>
+        <sys_class_name>sys_embedded_tour_step</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2019-01-14 21:29:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cf3953b4dbcb634071acf81d0f9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Step 1</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_embedded_tour_step_cf3953b4dbcb634071acf81d0f9619b5</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-14 21:29:04</sys_updated_on>
+        <target/>
+        <target_ref display_value="label.x_navyn_badges_badging_request.bad">033913b4dbcb634071acf81d0f96194f</target_ref>
+        <ui_version>dynamic</ui_version>
+        <view/>
+        <window>x_navyn_badges_badging_request.do</window>
+    </sys_embedded_tour_step>
+</record_update>

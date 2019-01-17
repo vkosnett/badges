@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-05 23:17:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3a69ab14db456b00cf04fd0e0f9619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.08B SECURITY</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_security_acl display_value="x_navyn_badges_visitors.u_status">5e69eb14db456b00cf04fd0e0f9619d6</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_3a69ab14db456b00cf04fd0e0f9619a5</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-10-05 23:17:53</sys_updated_on>
+        <sys_user_role display_value="08B SECURITY" name="08B SECURITY">796256c0dbbc9b0071acf81d0f9619bf</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

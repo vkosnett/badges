@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>badgingrequest</name>
+        <scoped_name>x_navyn_badges_badgingrequest</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-01 17:42:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>11667107dbbca700cf04fd0e0f96195c</sys_id>
+        <sys_mod_count>54</sys_mod_count>
+        <sys_name>badgingrequest</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_ui_macro_11667107dbbca700cf04fd0e0f96195c</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-02 18:34:13</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<tr>
+		<td align="center" width="2%"></td>
+		<td align="center" width="96%">
+	<style>
+		.button {
+		position: absolute;
+		right: 10px;
+		background-color: 	#F5F6F6;
+		color: black;
+		border: 1px solid #a2a39f;
+		border-radius: 4px;
+		padding:10px;
+		font: status-bar;
+
+		}
+		
+		.button:hover {
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+		color: black;
+		}
+		.bxrw {
+
+		}
+		.bxrw:hover {
+		background-color:#FFC300;
+		}
+
+		.headerx {
+
+		background-color:#a2a39f;
+		font: status-bar;
+		color: white;
+		border: 1px solid black;
+		padding: 5px;
+
+
+		}
+
+		.wheaderx {
+
+		font: status-bar;
+		color: black;
+		border: 1px solid #a2a39f;
+		padding: 5px;
+
+		}
+			.bheaderx {
+
+		font: status-bar;
+		color: black;
+		border: 1px solid #a2a39f;
+		padding: 5px;
+		weight: bold;
+
+		}
+
+		.dingcolor 
+		{
+		color: #1D9ECF;
+		}
+		.fire 
+		{
+		color: red;
+		}
+		.fire:hover 
+		{
+		color: green;
+		}
+		.forest 
+		{
+		color: green;
+		}
+		.forest:hover 
+		{
+		color: red;
+		}
+		.calm 
+		{
+		color: blue;
+		}
+		.calm:hover 
+		{
+		color: red;
+		}
+	</style>
+	<script>
+		<g2:evaluate>
+			var result=new x_navyn_badges.BadgeLibrary().badge_request_url(current);
+			result;
+		</g2:evaluate>
+		function updateRequestMacro()
+		{
+
+		var ga = new GlideAjax('x_navyn_badges.ClientScript');
+		ga.addParam('sysparm_name','updateMacro');
+		ga.addParam('sysparm_id',g_form.getUniqueValue());
+		ga.getXML(callb);
+
+		function callb(response) 
+		{
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+
+
+		document.getElementById('TitleDIV').innerHTML='<span class="icon icon-activity-circle dingcolor"></span>';
+	document.getElementById('styleandfamily').innerHTML=answer;
+		}
+	}
+</script>
+
+	<g2:no_escape><div id="TitleDIV"></div><div id="styleandfamily">$[result]</div></g2:no_escape>
+		</td>
+		<td align="center" width="2%"></td>
+	</tr>
+
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

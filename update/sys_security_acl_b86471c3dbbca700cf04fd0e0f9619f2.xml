@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <condition/>
+        <description>Default access control on x_navyn_badges_badging_request</description>
+        <name>x_navyn_badges_badging_request</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[if ((current.isNewRecord() || current.u_status.u_status_id==6010) && gs.hasRole('NRHQ'))
+	answer=true;
+else if (current.u_status.u_status_id>6010 && gs.hasRole("08B SECURITY"))
+		answer=true;
+else
+	answer=false;
+	]]></script>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-01 17:33:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b86471c3dbbca700cf04fd0e0f9619f2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_navyn_badges_badging_request</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_security_acl_b86471c3dbbca700cf04fd0e0f9619f2</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-14 15:46:42</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

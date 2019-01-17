@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>true</actions_access>
+        <alter_access>true</alter_access>
+        <client_scripts_access>true</client_scripts_access>
+        <configuration_access>true</configuration_access>
+        <create_access>true</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>true</delete_access>
+        <extension_model/>
+        <is_extendable>true</is_extendable>
+        <label>Badge Inventory</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_navyn_badges_badge_inventory</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <super_class display_value="Configuration Item" name="cmdb_ci">c6802081db0222006752f81d0f9619b9</super_class>
+        <sys_class_code>#|</sys_class_code>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path>/!!/#|</sys_class_path>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-09 13:07:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>31344a2ddbc1eb00cf04fd0e0f96193e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Badge Inventory</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_db_object_31344a2ddbc1eb00cf04fd0e0f96193e</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-10-11 16:29:21</sys_updated_on>
+        <update_access>true</update_access>
+        <user_role display_value="x_navyn_badges.badge_inventory_user" name="x_navyn_badges.badge_inventory_user">a454862ddbc1eb00cf04fd0e0f96190c</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+</record_update>

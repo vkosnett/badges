@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="u_status">
+    <u_status action="INSERT_OR_UPDATE">
+        <sys_class_name>u_status</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2019-01-11 18:42:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4b469bb3db32234071acf81d0f9619f0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Issuance in Progress</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>u_status_4b469bb3db32234071acf81d0f9619f0</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-11 18:42:48</sys_updated_on>
+        <u_active>true</u_active>
+        <u_allowed_transitions/>
+        <u_available_to_user_type/>
+        <u_background_color>red</u_background_color>
+        <u_description/>
+        <u_font_color>black</u_font_color>
+        <u_form_it_is_on>x_navyn_badges_badging_request</u_form_it_is_on>
+        <u_icon>&lt;span class="icon  icon-step-in forest"&gt;  &lt;/span&gt;</u_icon>
+        <u_nstate>4</u_nstate>
+        <u_owner>self</u_owner>
+        <u_previous_status_id/>
+        <u_status>Issuance in Progress</u_status>
+        <u_status_id>6062</u_status_id>
+        <u_status_state>3</u_status_state>
+        <u_task_state>4</u_task_state>
+        <u_widget_font_color>red</u_widget_font_color>
+    </u_status>
+</record_update>

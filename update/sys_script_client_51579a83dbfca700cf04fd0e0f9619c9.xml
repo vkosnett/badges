@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>organization_of_the_visitor</field>
+        <global>true</global>
+        <messages/>
+        <name>Show Other Organization</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	//alert(g_form.getControl('organization_of_the_visitor').options[g_form.getControl('organization_of_the_visitor').selectedIndex].value);
+if (g_form.getControl('organization_of_the_visitor').options[g_form.getControl('organization_of_the_visitor').selectedIndex].value=="OTHER" )
+{
+	g_form.setDisplay('other_organization_name', true);
+	g_form.setMandatory('other_organization_name', true);
+   
+}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-01 20:08:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>51579a83dbfca700cf04fd0e0f9619c9</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Show Other Organization</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_script_client_51579a83dbfca700cf04fd0e0f9619c9</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-10-18 13:51:22</sys_updated_on>
+        <table>x_navyn_badges_visitors</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

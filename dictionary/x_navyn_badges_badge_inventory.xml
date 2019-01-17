@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="cmdb_ci" label="Badge Inventory" max_length="40" name="x_navyn_badges_badge_inventory" sizeclass="12" type="collection">
+        <element label="Badge Expiration Date" max_length="40" name="badge_expiration_date" type="glide_date"/>
+        <element label="Badge History" max_length="8000" name="badge_history" read_only="true" type="html"/>
+        <element label="Issued" max_length="40" name="issued" type="boolean"/>
+        <element label="Issued To" max_length="60" name="issued_to" read_only="true" type="string"/>
+    </element>
+</database>

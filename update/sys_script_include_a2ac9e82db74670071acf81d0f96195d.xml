@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_navyn_badges.BadgeLibrary</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>BadgeLibrary</name>
+        <script><![CDATA[var BadgeLibrary = Class.create();
+BadgeLibrary.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	family_url_summary: function(c)
+	{
+		var scopeName=gs.getCurrentScopeName();
+		
+		var mbr= new GlideRecord(scopeName+'_visitors');
+		var ylink='<table>';
+		mbr.addQuery('u_serial_number', c.u_serial_number);
+		mbr.query();
+		while (mbr.next())
+			{
+			ylink=
+			
+			ylink+='<tr><td><a href="/x_navyn_badges_visitors.do?sys_id='+mbr.sys_id+'">'+mbr.first_name+' '+mbr.middle_name+' '+mbr.last_name+'</a>  ';
+			
+			ylink+="</td><td>"+mbr.u_status.getDisplayValue()+"</td></tr>";
+			
+			
+		}
+		return ylink+"</table>";
+		
+	},
+	
+	add_visitor_url : function() {
+		var c = new GlideRecord('x_navyn_badges_badging_request');
+		c.get(this.getParameter('sysparm_id'));
+		return '/x_navyn_badges_visitors.do?sys_id=-1&sysparm_query=u_serial_number='+c.number+'^sponsored='+c.sponsored+'^parent='+c.sys_id+'^badge_type='+c.badge_type+'^expected_badge_return_date='+c.work_end;
+	},
+	
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	badge_request_url: function(c)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+		var scopeName=gs.getCurrentScopeName();
+		var youAreHere='<span class="icon icon-star fire">  </span>';
+		var y='';
+		var link='<align="left">Engagement Details<br/>';
+		var etr='</tr>';
+		var tr='<tr class="bxrw">';
+		var td='<td class="headerx">';
+		var xtd='</td>';
+		var btn='';
+		if ( c.isNewRecord()==false && c.u_suggested==false)
+			{
+			//	btn='<a class="button" href="/x_navyn_badges_visitors.do?sys_id=-1&sysparm_query=u_serial_number='+c.number+'^sponsored='+c.sponsored+'^parent='+c.sys_id+'^expected_badge_return_date='+c.work_end+'">Add A Visitor To The List</a><br/><br/><br/><br/>';
+			
+		}
+		var mbr= new GlideRecord(scopeName+'_badging_request');
+		if 	(mbr.get('u_serial_number', c.u_serial_number))
+			{
+			mbr.addQuery('u_serial_number', c.u_serial_number);
+			mbr.query();
+			if (mbr.getRowCount()>0)
+				{
+				link+=btn+'<table width="60%" align="center">'+tr;
+				link+=td+'Meeting Start Date'+xtd;
+				link+=td+'Meeting End Date'+xtd;
+				link+=td+"Security Level"+xtd;
+				link+=td+'Sponsor'+xtd;
+				
+				link+=td+'Status'+xtd;
+				link+=etr;
+			}
+			td='<td class="wheaderx">';
+			while (mbr.next())
+				{
+				if (c.sys_id==mbr.sys_id)
+					y=youAreHere;
+				link+=tr+td+'<a href="/x_navyn_badges_badging_request.do?sys_id='+mbr.sys_id+'">'+mbr.work_start+'</a>'+xtd;
+				link+=td+mbr.work_end+xtd;
+				link+=td+mbr.badge_type+xtd;
+				link+=td+mbr.opened_by.getDisplayValue()+xtd;
+		
+				link+=td+mbr.u_status.u_icon+mbr.u_status.getDisplayValue()+xtd;
+				link+=etr;
+			}
+		}
+		link+='</table>';
+		link+=this.family_url(c);
+		
+		return link;
+		
+	},
+	
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	create_tasker_family_on_the_fly: function (c)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+		/*
+		var xlink='';
+		
+		if ( c.isNewRecord()==false && c.u_suggested==false)
+			{
+			var btn='<a class="button" href="/x_navyn_badges_visitors.do?sys_id=-1&sysparm_query=u_serial_number='+c.number+'^sponsored='+c.sponsored+'^parent='+c.sys_id+'^expected_badge_return_date='+c.work_end+'">Add A Visitor To The List</a><br/><br/><br/><br/>';
+			xlink+=btn+this.family_url(c);
+		}
+		else
+			{
+			xlink+=this.family_url(c);
+		}
+		
+		return xlink;
+ 		*/
+		return this.family_url(c);
+	},
+	
+	
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	family_url: function(c)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		var scopeName=gs.getCurrentScopeName();
+		var youAreHere='<span class="icon icon-star fire"></span>';
+		var ylink='';
+		var etr='</tr>';
+		var tr='<tr class="bxrw">';
+		var mbr= new GlideRecord(scopeName+'_visitors');
+		var btd='<td class="wheaderx" colspan="7"><center>';
+		if (c.sponsored==true)
+			btd='<td class="headerx" colspan="8"><center>';
+		var td='<td class="headerx">';
+		var xtd='</td>';
+		mbr.addQuery('u_serial_number', c.u_serial_number);
+		mbr.query();
+		if (mbr.getRowCount()>0)
+			{
+			ylink+='<table width="60%" align="center">'+tr+btd+'List of Visitors</center>'+xtd+etr+tr;
+			ylink+=td+'Name'+xtd;
+			ylink+=td+'Organization'+xtd;
+			if (c.sponsored==true)
+				ylink+=td+'Phone Number'+xtd;
+				ylink+=td+'Badge Type'+xtd;
+			ylink+=td+'Badge Number'+xtd;
+			ylink+=td+'Badge Issue Date'+xtd;
+			ylink+=td+'Expected Badge Return Date'+xtd;
+			ylink+=td+'Actual Badge Return Date'+xtd;
+			ylink+=td+'Badge Request Status'+xtd;
+			ylink+=etr;
+			
+		}
+		td='<td class="wheaderx">';
+		while (mbr.next())
+			{
+			
+			if (c.sys_id==mbr.sys_id)
+				{
+				y=youAreHere;
+			}
+			else
+				{
+				y='';
+				mbr.u_changed=new GlideDateTime();
+				mbr.update();
+			}
+			
+			ylink+=tr+td+y+'<a href="/x_navyn_badges_visitors.do?sys_id='+mbr.sys_id+'">'+mbr.first_name+' '+mbr.middle_name+' '+mbr.last_name+'</a>'+xtd;
+			if (mbr.other_organization_name=='')
+				ylink+=td+mbr.organization_of_the_visitor+xtd;
+			else
+				ylink+=td+mbr.organization_of_the_visitor.getDisplayValue()+'('+mbr.other_organization_name+')'+xtd;
+			if (mbr.sponsored==true)
+				ylink+=td+mbr.phone_number+xtd;
+				if (mbr.sponsored)
+				ylink+=td+"Sponsored Badge"+xtd;
+				else
+					ylink+=td+"Temporary"+xtd;
+			ylink+=td+mbr.selected_badge+xtd;
+			ylink+=td+mbr.badge_issue_date+xtd;
+			ylink+=td+mbr.expected_badge_return_date+xtd;
+			ylink+=td+mbr.actual_badge_return_date+xtd;
+			ylink+=td+mbr.u_status.u_icon+mbr.u_status.getDisplayValue()+xtd;
+			ylink+=etr;
+			
+		}
+		
+		return ylink+'</table>';
+	},
+	
+	localBadgeHistory: function()
+	{
+		var visitors= new GlideRecord('x_navyn_badges_forgetful_badge_requests');
+		visitors.query();
+		return visitors.getRowCount();
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	countIRows: function(tableName, issued)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+		var visitors= new GlideRecord(tableName);
+		visitors.addQuery('issued', issued);
+		visitors.addQuery('install_status',1);
+		visitors.query();
+		return visitors.getRowCount();
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	countRows: function(tableName, sponsored, statusID)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		var visitors= new GlideRecord(tableName);
+		visitors.addQuery('sponsored', sponsored);
+		visitors.addQuery('u_status.u_status_id', statusID);
+		visitors.query();
+		return visitors.getRowCount();
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	closeParentIfAllBadgesAreIssued: function(current)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		var allissued=true;
+		var allreturned=true;
+		var visitors= new GlideRecord('x_navyn_badges_visitors');
+		if (visitors.get('parent', current.parent))
+			{
+			visitors.addQuery('parent', current.parent);
+			visitors.query();
+			//7051 Badge Returned to 08B Security
+			//7071 Badge Issued to Visitor
+			var p=new GlideRecord('x_navyn_badges_badging_request');
+			if (p.get('sys_id', current.parent));
+				{
+				p.get('sys_id', current.parent);
+				while (visitors.next())
+					{
+					p.comments=visitors.first_name+' '+visitors.last_name+" "+visitors.u_status.getDisplayValue()+" "+new GlideDate()+"<br/>";
+					if (visitors.u_status.u_status_id.toString().trim()!='7071')//Badge Issued to Visitor
+						allissued=false;
+					if (visitors.u_status.u_status_id.toString().trim()!='7051')//Badge Returned to 08B Security
+						allreturned=false;
+				}
+				if (allissued==true)
+					{
+					p.u_status=this.getStatusDoc('6070');//All Badges Picked Up
+				}
+					else
+					p.u_status=this.getStatusDoc('6062');//Issuance in Progress	
+				if (allreturned==true)
+					{
+					p.u_status=this.getStatusDoc('6076');//All Badges Returned
+				}
+				p.u_changed=new GlideDateTime();
+				p.update();
+			}
+		}
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	getStatusDoc: function(statusID)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		var status=new GlideRecord('u_status');
+		if 	(status.get('u_status_id', statusID))
+			{
+			status.get('u_status_id', statusID);
+			return status.sys_id;
+		}
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	getDepartmentAsDefaultValue: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		var id=gs.getUserID();
+		var parent=new GlideRecord('sys_user');
+		if (parent.get('sys_id', id))
+			{
+			parent.get('sys_id', id);
+			return parent.department.sys_id;
+		}
+	},
+	
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	getDepartmentOnClientSide: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		//we use this function in the glide ajax to update the corresponding manager onchange of point of contact in the tasker form
+		var usr = new GlideRecord('sys_user');
+		var id = this.getParameter('sysparm_user_name');
+		
+		if (usr.get('sys_id', id))
+			{
+			//usr.addQuery('sys_id', id);
+			//usr.query();
+			//usr.next();
+			usr.get('sys_id', id);
+		}
+		return usr.department.sys_id;
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	closeVisitorsToSubmitterUpdate: function (c)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+		var id=gs.getUserID();
+		var usr=new GlideRecord('sys_user');
+		if (usr.get('sys_id', id))
+			{
+			usr.get('sys_id', id);
+			
+			var visitors= new GlideRecord('x_navyn_badges_visitors');
+			if (visitors.get('u_serial_number', c.u_serial_number))
+				{
+				visitors.addQuery('u_serial_number', c.u_serial_number);
+				visitors.query();
+				
+				while (visitors.next())
+					{
+					
+					var s=new GlideRecord('u_status');
+					if (s.get('u_status_id', 7061))
+						{
+						s.addQuery('u_status_id', 7061);
+						s.query();
+						s.next();
+						visitors.u_changed = new GlideDateTime();
+						visitors.u_status=s.sys_id;
+						visitors.comments=s.getDisplayValue()+" --"+usr.name+" --"+new GlideDateTime()+"<br/>";
+						visitors.update();
+					}
+				}
+			}
+		}
+	},
+	
+	
+	
+	type: 'BadgeLibrary'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-09-28 17:56:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a2ac9e82db74670071acf81d0f96195d</sys_id>
+        <sys_mod_count>354</sys_mod_count>
+        <sys_name>BadgeLibrary</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_script_include_a2ac9e82db74670071acf81d0f96195d</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-11 21:36:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

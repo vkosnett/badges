@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_formatter">
+    <sys_ui_formatter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <angular_module/>
+        <formatter>visitors.xml</formatter>
+        <name>Visitors</name>
+        <sys_class_name>sys_ui_formatter</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-04 20:32:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f13ab988db892b00cf04fd0e0f9619c9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Visitors</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_ui_formatter_f13ab988db892b00cf04fd0e0f9619c9</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-10-04 20:33:18</sys_updated_on>
+        <table>x_navyn_badges_visitors</table>
+        <type>formatter</type>
+    </sys_ui_formatter>
+</record_update>

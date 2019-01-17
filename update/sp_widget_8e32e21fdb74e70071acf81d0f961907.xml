@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function(snRecordWatcher, $scope, spUtil, $rootScope, $timeout) {
+	var c=this;
+
+	$scope.IsSponsored = false;
+	$scope.IsActive = false;
+	$scope.IsNotActive = false;
+	$scope.IsList = false;
+	$scope.getExplanation=function (IsActive) {
+		if (!IsActive) {
+			$scope.IsActive = true;
+					$scope.IsList  = false;
+					$scope.IsSponsored  = false;
+		} else {
+			$scope.IsActive = false;
+		}
+	}
+
+	$scope.mouseover = function (IsSponsored ) {
+		if (!IsSponsored ) {
+			$scope.IsSponsored  = true;
+				$scope.IsActive = false;
+			$scope.IsList = false;
+		} else {
+			$scope.IsSponsored  = false;
+		}
+	}
+
+
+	$scope.getX= function (IsList ) {
+		if (!IsList ) {
+			$scope.IsList  = true;
+					$scope.IsSponsored  = false;
+				$scope.IsActive = false;
+		} else {
+			$scope.IsList = false;
+		}
+	}
+
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.SoftFrame{
+
+  font: bold 18px Calibri;
+  color: navy;
+  padding: 40px 40px;
+  -moz-box-shadow: 3px 3px 3px #ccc;
+  -webkit-box-shadow: 3px 3px 3px #ccc;
+  box-shadow: 3px 3px 3px #ccc;
+  border-radius: 9px;
+
+}
+
+.buttony {
+  color: white;
+  display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
+  position: relative; /* All 'absolute'ly positioned elements are relative to this one */
+  padding: 10px 12px; /* Add some padding so it looks nice */
+  -webkitkit-box-shadow: 0 0 10px rgb(0, 0, 0);
+  -moz-box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.button__badge {
+  background-color: navy;
+  border-radius: 2px;
+  color: white;
+
+  padding: 1px 3px;
+  font: bold 10px Calibri;
+  top: 0;
+  right: 0;
+  position: absolute; /* Position the badge within the relatively positioned button */
+  box-shadow: 2px 2px 2px #070601;
+}
+
+.widt
+{
+  width:100vw;  
+}
+.firstBanner
+{
+  background-color:#F5F6F6;
+  left:0;
+  top: 0;
+  width:100vw;  
+
+}
+.TITLE
+{
+  font: status-bar;
+  color: red;
+    font: bold 18px Calibri;
+
+}
+.title
+{
+  color: black;
+  padding-left: 5px;
+  padding-top: 1px;
+  font: status-bar;
+
+}
+
+
+
+.link {
+  color: #3B5990;
+  font: status-bar;
+  font: bold 18px Calibri;
+
+}
+a {
+  
+}
+a[ALT]:hover:after {
+  content: attr(ALT);
+ font: status-bar;
+  color: red;
+    padding-left: 13px;
+      justify-content: right;
+ box-shadow:1px 1px 1px 1px #070601;
+right:0;
+}
+.link:hover {
+  color: blue;
+  font: bold 18px Calibri;
+
+
+}
+
+/* Define how each icon button should look like */
+
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>badge-request-menu</id>
+        <internal>false</internal>
+        <link/>
+        <name>Badge Request Menu</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+  data.myname = gs.getUserName().trim();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-02 15:32:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8e32e21fdb74e70071acf81d0f961907</sys_id>
+        <sys_mod_count>230</sys_mod_count>
+        <sys_name>Badge Request Menu</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sp_widget_8e32e21fdb74e70071acf81d0f961907</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-09 21:54:04</sys_updated_on>
+        <template><![CDATA[
+
+
+<div  class="SoftFrame"><img src='/fa2aafc0db351b00cf04fd0e0f96190b.iix'>
+  08B SECURITY BADGE REQUEST AND STATUS VIEW MENU
+</div>  
+
+<div class="SoftFrame">  
+  <div>
+    <a class="link"  ng-href="/x_navyn_badges_badging_request.do?sys_id=-1&sysparm_query=sponsored=false&badge_type=" ALT="Temporary Badges: These badges are issued for short term engagements of 30 days or less">
+      1. Request Temporary Badge(s)</a><br/><br/>
+  </div>
+
+  <div> 
+    <a class="link" ng-href="/x_navyn_badges_badging_request.do?sys_id=-1&sysparm_query=sponsored=true&badge_type=Cleared" ALT="Sponsored Badges: These badges are issued to those who need access the Headquarters for more than 30 days">
+      2. Request a Sponsored Badge(s)</a><br/><br/>
+  </div>
+
+
+
+  <div>
+    <a class="link"  ng-href="x_navyn_badges_badging_request_list.do?sysparm_query=sys_created_by={{data.myname}}"  ALT="View the list of badges you have requested to date">
+      3. Check Your Badge Request Status</a><br/><br/>
+  </div>
+
+</div>
+
+
+]]></template>
+    </sp_widget>
+</record_update>

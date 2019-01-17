@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>true</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <messages/>
+        <name>Hide Show on Badging Request</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	if (g_form.isNewRecord())
+		{
+		g_form.setDisplay('u_tasker_history',false);
+		g_form.setDisplay('u_status',false);
+		g_form.setDisplay('sys_updated_on',false);
+	}
+	
+	g_form.setDisplay('sponsored',false);
+	g_form.setDisplay('u_serial_number',false);
+	g_form.setDisplay('u_changed',false);
+	g_form.setDisplay('u_suggested',false);
+	
+	if (!g_user.hasRole('admin'))
+		g_form.setSectionDisplay('admin', false);
+	if (!g_user.hasRole('08B Security'))
+		g_form.setSectionDisplay('08B Processing Section', false);
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-04 14:21:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f2f460c8dbc52b00cf04fd0e0f96191c</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Hide Show on Badging Request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_script_client_f2f460c8dbc52b00cf04fd0e0f96191c</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-11-05 17:57:50</sys_updated_on>
+        <table>x_navyn_badges_badging_request</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

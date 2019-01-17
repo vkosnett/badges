@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="sys_created_by" label="Created By" language="en" table="x_navyn_badges_badging_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>sys_created_by</element>
+            <help/>
+            <hint/>
+            <label>Created By</label>
+            <language>en</language>
+            <name>x_navyn_badges_badging_request</name>
+            <plural>Created Bys</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-01 17:41:59</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>bc563507dbbca700cf04fd0e0f96194b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Created By</sys_name>
+            <sys_package/>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+            <sys_update_name>sys_documentation_x_navyn_badges_badging_request_sys_created_by_en</sys_update_name>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-01 19:06:45</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

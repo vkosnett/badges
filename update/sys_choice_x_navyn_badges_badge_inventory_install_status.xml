@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="install_status" table="x_navyn_badges_badge_inventory" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>install_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Active</label>
+            <language>en</language>
+            <name>x_navyn_badges_badge_inventory</name>
+            <sequence>0</sequence>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-22 20:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>92e02ab1db99a70071acf81d0f9619a8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>munsonea</sys_updated_by>
+            <sys_updated_on>2018-10-22 20:12:43</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>install_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lost</label>
+            <language>en</language>
+            <name>x_navyn_badges_badge_inventory</name>
+            <sequence>1</sequence>
+            <sys_created_by>munsonea</sys_created_by>
+            <sys_created_on>2018-10-22 20:12:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2132e6bddb51e700cf04fd0e0f9619c7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>munsonea</sys_updated_by>
+            <sys_updated_on>2018-10-22 20:12:43</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>install_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Destroyed</label>
+            <language>en</language>
+            <name>x_navyn_badges_badge_inventory</name>
+            <sequence>2</sequence>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-22 20:12:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0a32a2f1db99a70071acf81d0f96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-22 20:12:45</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>install_status</element>
+            <name>x_navyn_badges_badge_inventory</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-22 20:07:02</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>1ee06ab1db99a70071acf81d0f961901</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>install_status</sys_name>
+            <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+            <sys_update_name>sys_choice_x_navyn_badges_badge_inventory_install_status</sys_update_name>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-22 20:07:02</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

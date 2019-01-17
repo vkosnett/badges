@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_filter_option_dynamic">
+    <sys_filter_option_dynamic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <available_for_default>true</available_for_default>
+        <available_for_filter>false</available_for_filter>
+        <available_for_ref_qual>false</available_for_ref_qual>
+        <field_type display_value="Reference">52a227c1bf3320001875647fcf07396a</field_type>
+        <label>Default Status Value of 08B SEcurity</label>
+        <order/>
+        <roles>08B SECURITY</roles>
+        <script>javascript: new x_navyn_badges.StatusSelectionScripts().DefaultVisitorsStatus()</script>
+        <script_reference_id/>
+        <script_reference_table/>
+        <sys_class_name>sys_filter_option_dynamic</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2019-01-11 14:58:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0f926a7fdb362340cf04fd0e0f96191b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Default Status Value of 08B SEcurity</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_filter_option_dynamic_0f926a7fdb362340cf04fd0e0f96191b</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-11 15:05:43</sys_updated_on>
+        <table>x_navyn_badges_visitors</table>
+        <table_containing_filter/>
+    </sys_filter_option_dynamic>
+</record_update>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="Visitors" max_length="40" name="x_navyn_badges_visitors" type="collection">
+        <element label="Actual Badge Return Date" max_length="40" name="actual_badge_return_date" type="glide_date"/>
+        <element label="Asset Tag" max_length="32" name="asset_tag" reference="x_navyn_badges_badge_inventory" reference_qual="issued=false^install_status=1^EQ" reference_qual_condition="issued=false^install_status=1^EQ" type="reference"/>
+        <element label="Badges should be returned" max_length="40" name="badges_should_be_returned" type="boolean"/>
+        <element label="Badge Approved Date" max_length="40" name="badge_approved_date" read_only="true" type="glide_date"/>
+        <element label="Badge Issue Date" max_length="40" name="badge_issue_date" type="glide_date"/>
+        <element choice="1" label="Badge Type" max_length="40" name="badge_type" read_only="true" type="choice">
+            <choice>
+                <element label="Cleared" value="Cleared"/>
+                <element label="Uncleared" value="Uncleared"/>
+            </choice>
+        </element>
+        <element label="Comments" max_length="4000" name="comments" type="journal_input"/>
+        <element label="Expected Badge Return Date" max_length="40" name="expected_badge_return_date" type="glide_date"/>
+        <element label="First Name" mandatory="true" max_length="50" name="first_name" type="string"/>
+        <element label="Last Name" mandatory="true" max_length="50" name="last_name" type="string"/>
+        <element label="Middle Name" max_length="50" name="middle_name" type="string"/>
+        <element label="Reasons (How often will the visitor be at NRHQ and who will be visited)" max_length="4000" name="notes" type="journal"/>
+        <element choice="1" label="Organization of the Visitor" mandatory="true" max_length="40" name="organization_of_the_visitor" type="choice">
+            <choice>
+                <element label="BPMI" sequence="0" value="BPMI"/>
+                <element label="NNL" sequence="0" value="NNL"/>
+                <element label="NRLFO" sequence="1" value="NRLFO"/>
+                <element label="NRRO" sequence="2" value="NRRO"/>
+                <element label="OTHER" sequence="3" value="OTHER"/>
+                <element label="SHIPYARD" sequence="4" value="SHIPYARD"/>
+            </choice>
+        </element>
+        <element label="Please enter organization name" max_length="50" name="other_organization_name" type="string"/>
+        <element label="Parent" max_length="32" name="parent" read_only="true" reference="x_navyn_badges_badging_request" type="reference"/>
+        <element attributes="territory='North America'" label="Phone Number of the Visitor" max_length="40" name="phone_number" type="phone_number_e164"/>
+        <element label="Selected Badge" max_length="12" name="selected_badge" read_only="true" type="string"/>
+        <element attributes="format=none" label="Social Security Number" max_length="9" name="social_security_number" type="string"/>
+        <element label="Sponsored" max_length="40" name="sponsored" read_only="true" type="boolean"/>
+        <element label="Document History" max_length="8000" name="tasker_history" read_only="true" type="html"/>
+        <element label="Changed" max_length="40" name="u_changed" read_only="true" type="glide_date_time"/>
+        <element label="Serial_number" max_length="12" name="u_serial_number" read_only="true" type="string"/>
+        <element choice="1" default="javascript:javascript: new x_navyn_badges.StatusSelectionScripts().DefaultVisitorsStatus()" dynamic_default_value="cb22baf7db762340cf04fd0e0f961900" label="Status" mandatory="true" max_length="32" name="u_status" reference="u_status" reference_qual="javascript:new  x_navyn_badges.StatusSelectionScripts().VisitorStatus();" type="reference" use_dynamic_default="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element label="Tasker History" max_length="8000" name="u_tasker_history" read_only="true" type="html"/>
+        <element label="Visit Request Sent from JPAS" max_length="40" name="visit_request_sent_from_jpas" type="boolean"/>
+        <index name="index">
+            <element name="asset_tag"/>
+        </index>
+        <index name="index2">
+            <element name="parent"/>
+        </index>
+        <index name="index3">
+            <element name="u_status"/>
+        </index>
+    </element>
+</database>

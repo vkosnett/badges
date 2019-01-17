@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="latest_states_of_badges" label="Latest States of Badges" language="en" table="x_navyn_badges_badging_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>latest_states_of_badges</element>
+            <help/>
+            <hint/>
+            <label>Latest States of Badges</label>
+            <language>en</language>
+            <name>x_navyn_badges_badging_request</name>
+            <plural>Latest States of Badges</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-10 20:16:43</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>8c522663db3aef0071acf81d0f96197d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Latest States of Badges</sys_name>
+            <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+            <sys_update_name>sys_documentation_x_navyn_badges_badging_request_latest_states_of_badges_en</sys_update_name>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-10 20:16:43</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

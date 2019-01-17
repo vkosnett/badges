@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="badge_history" label="Badge History" language="en" table="x_navyn_badges_badge_inventory">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>badge_history</element>
+            <help/>
+            <hint/>
+            <label>Badge History</label>
+            <language>en</language>
+            <name>x_navyn_badges_badge_inventory</name>
+            <plural>Badge Histories</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-11 22:28:09</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>d2b7929edb8d230071acf81d0f961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Badge History</sys_name>
+            <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+            <sys_update_name>sys_documentation_x_navyn_badges_badge_inventory_badge_history_en</sys_update_name>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-11 22:28:09</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

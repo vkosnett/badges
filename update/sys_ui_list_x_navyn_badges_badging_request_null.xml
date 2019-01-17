@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_navyn_badges_badging_request" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_serial_number</element>
+            <list_id display_value="x_navyn_badges_badging_request" element="NULL" name="x_navyn_badges_badging_request" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">68566d6bdb01e300cf04fd0e0f961991</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 16:04:42</sys_created_on>
+            <sys_id>ec566d6bdb01e300cf04fd0e0f961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 16:04:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>work_start</element>
+            <list_id display_value="x_navyn_badges_badging_request" element="NULL" name="x_navyn_badges_badging_request" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">68566d6bdb01e300cf04fd0e0f961991</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 16:04:42</sys_created_on>
+            <sys_id>60566d6bdb01e300cf04fd0e0f961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 16:04:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>work_end</element>
+            <list_id display_value="x_navyn_badges_badging_request" element="NULL" name="x_navyn_badges_badging_request" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">68566d6bdb01e300cf04fd0e0f961991</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 16:04:42</sys_created_on>
+            <sys_id>e0566d6bdb01e300cf04fd0e0f961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 16:04:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_status</element>
+            <list_id display_value="x_navyn_badges_badging_request" element="NULL" name="x_navyn_badges_badging_request" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">68566d6bdb01e300cf04fd0e0f961991</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 16:04:42</sys_created_on>
+            <sys_id>64566d6bdb01e300cf04fd0e0f961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 16:04:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>opened_by</element>
+            <list_id display_value="x_navyn_badges_badging_request" element="NULL" name="x_navyn_badges_badging_request" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">68566d6bdb01e300cf04fd0e0f961991</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 16:04:42</sys_created_on>
+            <sys_id>e4566d6bdb01e300cf04fd0e0f961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 16:04:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sponsored</element>
+            <list_id display_value="x_navyn_badges_badging_request" element="NULL" name="x_navyn_badges_badging_request" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">68566d6bdb01e300cf04fd0e0f961991</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 16:04:42</sys_created_on>
+            <sys_id>68566d6bdb01e300cf04fd0e0f961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 16:04:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_navyn_badges_badging_request</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 17:55:39</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6b9b03ffdbfeef0071acf81d0f961975</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package/>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 17:55:39</sys_updated_on>
+            <sys_user display_value="Verda Kosnett">846ec823db02220071acf81d0f961958</sys_user>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

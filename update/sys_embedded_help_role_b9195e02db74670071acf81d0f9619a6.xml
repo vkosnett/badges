@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role/>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-09-28 17:39:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b9195e02db74670071acf81d0f9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>71195e02db74670071acf81d0f9619a5</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_embedded_help_role_b9195e02db74670071acf81d0f9619a6</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-09-28 17:39:57</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

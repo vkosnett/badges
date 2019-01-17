@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="1de86e23dbc1e300cf04fd0e0f961978" sys_domain="global" table="x_navyn_badges_badge_inventory" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 20:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d1e8ae23dbc1e300cf04fd0e0f9619b2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_navyn_badges_badge_inventory" name="x_navyn_badges_badge_inventory" sys_domain="global" view="Default view">1de86e23dbc1e300cf04fd0e0f961978</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_navyn_badges_badge_inventory" sys_domain="global" view="Default view">b330c552db4d2300cf04fd0e0f96195b</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 20:55:35</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 20:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dde8ae23dbc1e300cf04fd0e0f9619b2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_navyn_badges_badge_inventory" name="x_navyn_badges_badge_inventory" sys_domain="global" view="Default view">1de86e23dbc1e300cf04fd0e0f961978</sys_ui_form>
+            <sys_ui_section caption="Assignments" display_value="Assignments" name="x_navyn_badges_badge_inventory" sys_domain="global" view="Default view">55e86e23dbc1e300cf04fd0e0f961977</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 20:55:35</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 20:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d5e8ae23dbc1e300cf04fd0e0f9619b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_navyn_badges_badge_inventory" name="x_navyn_badges_badge_inventory" sys_domain="global" view="Default view">1de86e23dbc1e300cf04fd0e0f961978</sys_ui_form>
+            <sys_ui_section caption="History" display_value="History" name="x_navyn_badges_badge_inventory" sys_domain="global" view="Default view">11e86e23dbc1e300cf04fd0e0f961978</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 20:55:35</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_navyn_badges_badge_inventory</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-15 20:55:35</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1de86e23dbc1e300cf04fd0e0f961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_navyn_badges_badge_inventory</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+            <sys_update_name>sys_ui_form_sections_1de86e23dbc1e300cf04fd0e0f961978</sys_update_name>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-15 20:55:35</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

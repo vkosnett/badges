@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <conditions table="x_navyn_badges_badging_request">work_endMORETHANwork_start@year@after@1^EQ<item endquery="false" field="work_end" goto="false" newquery="false" operator="MORETHAN" or="false" value="work_start@year@after@1"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>false</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+ return true;
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+ alert("Badges cannot be issued for more than a year.");
+     g_form.setValue('work_end', ''); 
+	return false;
+}]]></script_true>
+        <set_values/>
+        <short_description>if the duration is longer than a year reject it</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2019-01-09 18:38:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>26814597db36ef00cf04fd0e0f9619d9</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>if the duration is longer than a year reject it</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_ui_policy_26814597db36ef00cf04fd0e0f9619d9</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-11 20:53:24</sys_updated_on>
+        <table>x_navyn_badges_badging_request</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

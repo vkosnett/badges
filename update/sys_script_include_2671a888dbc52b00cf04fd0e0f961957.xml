@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_navyn_badges.ButtonDisplayRules</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>ButtonDisplayRules</name>
+        <script><![CDATA[var ButtonDisplayRules = Class.create();
+ButtonDisplayRules.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	//displayThisToNoneSecurity Users
+	
+	displayToNonSecurityRoles: function()
+	{
+		if ( (current.u_status.u_status_id==6010 || current.isNewRecord()))
+			return true;
+		else
+			return false;
+		
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	shouldWeDisplayAddVisitorButton: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+		if (  current.isNewRecord()==false )//&& current.u_suggested==false)
+			{
+			return true;
+		}
+		else
+			{
+			return false;
+		}
+		
+	},
+	
+	sendemailRules: function()
+	{
+			if ( !current.isNewRecord() &&  gs.hasRole('08B SECURITY'))
+				{
+			var scopeName=gs.getCurrentScopeName();
+			var mbr= new GlideRecord(scopeName+'_visitors');
+			var td='<td class="headerx">';
+			var xtd='</td>';
+			mbr.addQuery('u_serial_number', current.u_serial_number);
+			mbr.query();
+			if (mbr.getRowCount()>0)
+				
+			return true;
+		}
+	
+		else
+			return false;
+		
+				
+		
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	shouldWeDisplaySubmitTo08B: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+		if 
+			(( !current.isNewRecord() && !current.u_suggested && !gs.hasRole('08B SECURITY'))|| gs.hasRole('08B SECURITY'))
+			
+		
+		{
+			var scopeName=gs.getCurrentScopeName();
+			var mbr= new GlideRecord(scopeName+'_visitors');
+			var td='<td class="headerx">';
+			var xtd='</td>';
+			mbr.addQuery('u_serial_number', current.u_serial_number);
+			mbr.query();
+			if (mbr.getRowCount()>0)
+				
+			return true;
+		}
+	
+		else
+			return false;
+		
+		
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	shouldWeDisplayNewVisitorSave: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		if ((current.isNewRecord()==true || current.u_status.u_status_id.toString().trim()=='7010') && !gs.hasRole('08B SECURITY'))
+			{
+		return true;
+			
+		}
+		else
+			{
+			return false;
+		}
+		
+		
+	},
+	
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	should08BAPPROVEbuttonShow: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+		if (  gs.hasRole('08B SECURITY') && current.u_suggested==true && current.u_status.u_status_id.toString().trim()=='6061')
+			
+		
+		{
+			return true;
+		}
+		else
+			{
+			return false;
+		}
+		
+	},
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	should08BAPPROVEVisitorbuttonShow: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+		if (  gs.hasRole('08B SECURITY') && current.u_status.u_status_id.toString().trim()!='7010')
+			
+		
+		{
+			return true;
+		}
+		else
+			{
+			return false;
+		}
+		
+	},
+		// ---------------------------------------------------------------------------------------------------------------------------------
+	x08BAlwaysShow: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+		if (gs.hasRole('08B SECURITY'))
+			
+		
+		{
+			return true;
+		}
+		else
+			{
+			return false;
+		}
+		
+	},
+	
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	isItANewRecord: function()
+	
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		if (current.isNewRecord())
+			return true;
+		else
+			return false;
+	},
+	type: 'ButtonDisplayRules'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-04 14:07:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2671a888dbc52b00cf04fd0e0f961957</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>ButtonDisplayRules</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_script_include_2671a888dbc52b00cf04fd0e0f961957</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-14 18:37:04</sys_updated_on>
+    </sys_script_include>
+</record_update>

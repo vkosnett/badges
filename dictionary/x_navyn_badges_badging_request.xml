@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="live-feed=false" audit="true" extends="u_tasks_with_ntk" label="Badging Request" max_length="40" name="x_navyn_badges_badging_request" sizeclass="25" type="collection">
+        <element label="Alternate Sponsor" max_length="32" name="alternate_sponsor" reference="sys_user" reference_qual="cost_center=^EQ" reference_qual_condition="cost_center=^EQ" type="reference"/>
+        <element attributes="live-feed=false" choice="1" default="Cleared" label="Badge Type" mandatory="true" max_length="40" name="badge_type" type="choice">
+            <choice>
+                <element label="Cleared" value="Cleared"/>
+                <element label="Unclaread" sequence="1" value="Uncleared"/>
+            </choice>
+        </element>
+        <element label="Latest States of Badges" max_length="8000" name="latest_states_of_badges" type="html"/>
+        <element label="Sponsored" max_length="40" name="sponsored" read_only="true" type="boolean"/>
+    </element>
+</database>

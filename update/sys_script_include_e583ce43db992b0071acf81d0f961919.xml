@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_navyn_badges.ClientScript</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>ClientScript</name>
+        <script><![CDATA[var ClientScript = Class.create();
+ClientScript.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+// ---------------------------------------------------------------------------------------------------------------------------------
+	updateMacro: function()
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		var sysid=this.getParameter('sysparm_id').toString().trim();
+	
+		
+		var v=new GlideRecord('x_navyn_badges_visitors');
+		var r = new GlideRecord('x_navyn_badges_badging_request');
+		var rslt='';
+
+	
+		if (r.get('sys_id', sysid))
+			{
+			
+			r.addQuery('sys_id', sysid);
+			r.query();
+			r.next();
+			
+			return this.cbadge_request_url(r);
+		}
+		
+		else if (v.get("sys_id", sysid))
+			{
+		
+			v.addQuery('sys_id', sysid);
+			v.query();
+			v.next();
+return this.cbadge_request_url(v);
+			
+		}
+		
+		else
+			return 'your query sucks';
+		
+	
+	},
+		// ---------------------------------------------------------------------------------------------------------------------------------
+	cbadge_request_url: function(c)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	
+	{
+	
+		var scopeName=gs.getCurrentScopeName();
+		var youAreHere='<span class="icon icon-star fire">  </span>';
+		
+		var y='';
+		var link='';
+		var etr="</tr>";
+		var tr='<tr class="bxrw">';
+		var td='<td class="headerx">';
+		var xtd='</td>';
+		var mbr= new GlideRecord(scopeName+'_badging_request');
+		if 	(mbr.get('u_serial_number', c.u_serial_number))
+			{
+				if (c.sys_id==mbr.sys_id)
+			y=youAreHere;
+			mbr.addQuery('u_serial_number', c.u_serial_number);
+			mbr.query();
+			if (mbr.getRowCount()>0)
+				{
+				link+='<table width="60%" align="center">'+tr;
+				link+=td+'Meeting Start Date'+xtd;
+				link+=td+'Meeting End Date'+xtd;
+				link+=td+"Badge Type"+xtd;
+				link+=td+'Sponsor'+xtd;
+				link+=td+'Status'+xtd;
+				link+=etr;
+			}
+		
+	
+	
+		td='<td class="wheaderx">';
+		while (mbr.next())
+			{
+	
+			
+			link+=tr+td+y+'<a href="/x_navyn_badges_badging_request.do?sys_id='+mbr.sys_id+'">'+mbr.work_start+'</a>'+xtd;
+			link+=td+mbr.work_end+xtd;
+			link+=td+mbr.badge_type+xtd;
+			link+=td+mbr.opened_by.getDisplayValue()+xtd;
+			link+=td+mbr.u_status.u_icon+mbr.u_status.getDisplayValue()+xtd;
+			
+			link+=etr;
+		}
+			
+			}
+		link+='</table>';
+		
+	link+=this.cfamily_url(c);
+		
+	
+		return 	link;
+	
+		
+	},
+		
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	cfamily_url: function(c)
+	// ---------------------------------------------------------------------------------------------------------------------------------
+	{
+		var scopeName=gs.getCurrentScopeName();
+		var youAreHere='<span class="icon icon-star fire">  </span>';
+		var ylink='';
+		var etr='</tr>';
+		var tr='<tr  class="bxrw">';
+		var mbr= new GlideRecord(scopeName+'_visitors');
+		var btd='<td class="headerx" colspan="7"><center>';
+		if (c.sponsored==true)
+			btd='<td class="headerx" colspan="8"><center>';
+		var td='<td class="headerx">';
+		var xtd='</td>';
+		mbr.addQuery('u_serial_number', c.u_serial_number);
+		mbr.query();
+		if (mbr.getRowCount()>0)
+			{
+			ylink+='<table width="60%" align="center">'+tr+btd+'List of Visitors</center>'+xtd+etr+tr;
+			ylink+=td+'Name'+xtd;
+			ylink+=td+'Organization'+xtd;
+			if (c.sponsored==true)
+				ylink+=td+'Phone Number'+xtd;
+			ylink+=td+'Badge Number'+xtd;
+			ylink+=td+'Badge Issue Date'+xtd;
+			ylink+=td+'Expected Badge Return Date'+xtd;
+			ylink+=td+'Actual Badge Return Date'+xtd;
+			ylink+=td+'Badge Request Status'+xtd;
+			ylink+=etr;
+		}
+		
+		td='<td class="wheaderx">';
+		while (mbr.next())
+			{
+		if (c.sys_id==mbr.sys_id)
+				{
+				y=youAreHere;
+			}
+		else
+				y='';
+		
+			ylink+=tr+td+y+'<a href="/x_navyn_badges_visitors.do?sys_id='+mbr.sys_id+'">'+mbr.first_name+' '+mbr.middle_name+' '+mbr.last_name+'</a>'+xtd;
+			if (mbr.other_organization_name=='')
+				ylink+=td+mbr.organization_of_the_visitor+xtd;
+			else
+				ylink+=td+mbr.organization_of_the_visitor.getDisplayValue()+'('+mbr.other_organization_name+')'+xtd;
+			if (mbr.sponsored==true)
+				ylink+=td+mbr.phone_number+xtd;
+			ylink+=td+mbr.selected_badge+xtd;
+			ylink+=td+mbr.badge_issue_date+xtd;
+			ylink+=td+mbr.expected_badge_return_date+xtd;
+			ylink+=td+mbr.actual_badge_return_date+xtd;
+			ylink+=td+mbr.u_status.u_icon+mbr.u_status.getDisplayValue()+xtd;
+			ylink+=etr;
+		}
+		
+		
+		return ylink+'</table>';
+	},
+	
+	
+	
+    type: 'ClientScript'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-26 15:13:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e583ce43db992b0071acf81d0f961919</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>ClientScript</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_script_include_e583ce43db992b0071acf81d0f961919</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-10-26 19:38:18</sys_updated_on>
+    </sys_script_include>
+</record_update>

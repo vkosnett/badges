@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.SoftFrame{
+  font: bold 18px Calibri;
+  color: gray;
+  padding: 10px 12px;
+  -moz-box-shadow: 3px 3px 3px #ccc;
+  -webkit-box-shadow: 3px 3px 3px #ccc;
+  box-shadow: 3px 3px 3px #ccc;
+  border-radius: 9px;
+
+}
+
+.buttony {
+  color: white;
+  display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
+  position: relative; /* All 'absolute'ly positioned elements are relative to this one */
+  padding: 10px 12px; /* Add some padding so it looks nice */
+  -webkitkit-box-shadow: 0 0 10px rgb(0, 0, 0);
+  -moz-box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.button__badge {
+  background-color: navy;
+  border-radius: 2px;
+  color: white;
+
+  padding: 1px 3px;
+  font: bold 10px Calibri;
+  top: 0;
+  right: 0;
+  position: absolute; /* Position the badge within the relatively positioned button */
+  box-shadow: 2px 2px 2px #070601;
+}
+
+.widt
+{
+  width:100vw;  
+}
+.firstBanner
+{
+  background-color:#F5F6F6;
+  left:0;
+  top: 0;
+  width:100vw;  
+
+}
+.shadow 
+{
+  font: status-bar;
+  color: red;
+}
+.title
+{
+  color: black;
+  padding-left: 5px;
+  padding-top: 1px;
+  font: status-bar;
+
+}
+
+
+
+.link {
+  color: #3B5990;
+  font: status-bar;
+  font-size:75%;
+
+}
+.link:hover {
+  color: blue;
+}
+
+/* Define how each icon button should look like */
+
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>08b_security_badget_processing</id>
+        <internal>false</internal>
+        <link/>
+        <name>BadgeProcessing</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	var sl = new x_navyn_badges.BadgeLibrary();
+	data.myname = gs.getUserName().trim();
+	data.SubmittedToSecurity=sl.countRows('x_navyn_badges_badging_request', false, 6061);
+	data.ReadyForPickup=sl.countRows('x_navyn_badges_badging_request', false, 6020);
+	data.IssuedButNotReturned=sl.countRows('x_navyn_badges_visitors', false, 7071);
+	data.Ready=sl.countRows('x_navyn_badges_visitors', false, 7070);
+
+	data.sSubmittedToSecurity=sl.countRows('x_navyn_badges_badging_request', true, 6061);
+	data.sReadyForPickup=sl.countRows('x_navyn_badges_badging_request', true, 6020);
+	data.sIssuedButNotReturned=sl.countRows('x_navyn_badges_visitors', true, 7071);
+	data.sReady=sl.countRows('x_navyn_badges_visitors', true, 7070);
+data.sComplete=sl.countRows('x_navyn_badges_badging_request', true, 6076);
+	data.Issued=sl.countIRows('x_navyn_badges_badge_inventory', true);
+	data.NotIssued=sl.countIRows('x_navyn_badges_badge_inventory', false);
+	data.localHistory=sl.localBadgeHistory();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-12 20:09:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1ea1c7a6db096300cf04fd0e0f9619d3</sys_id>
+        <sys_mod_count>173</sys_mod_count>
+        <sys_name>BadgeProcessing</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sp_widget_1ea1c7a6db096300cf04fd0e0f9619d3</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-11-05 19:03:55</sys_updated_on>
+        <template><![CDATA[<div  class="SoftFrame"><img src='/fa2aafc0db351b00cf04fd0e0f96190b.iix'>08B SECURITY BADGE REQUEST MANAGEMENT TOOL</div>  
+<div class="SoftFrame">Badge Inventory Management   <div><br/>
+  <a class="link" ng-href="/x_navyn_badges_badge_inventory.do?sys_id=-1&sysparm_query=sponsored=false">*Add a new badge to the badge inventory</a><br/>
+  </div>
+  <div>
+    <a class="link" ng-href="x_navyn_badges_badge_inventory_list.do?sysparm_query=issued=true">*View List of Badges Currently Issued (Use this feature for NRHQ Employees Who Forgot Their Badge At Home) </a>
+    <div class="buttony"><span class="button__badge">({{data.Issued}})</span> </div>
+  </div>
+  <div>
+    <a class="link" ng-href="x_navyn_badges_badge_inventory_list.do?sysparm_query=issued=false^install_status=1">*View List of Temporary Badges Currently Available/Unassigned</a>
+    <div class="buttony"><span class="button__badge">({{data.NotIssued}})</span> </div>
+  </div>
+</div>
+<div class="SoftFrame">Manage Temporary Badge Requests<div><br/>
+
+  <a class="link" ng-mouseover="mouseover(IsSponsored)" ng-href="x_navyn_badges_badging_request_list.do?sysparm_query=sponsored=false^u_status.u_status_id=6061">*Manage Temporary Badge Requests Submitted to Security</a>
+  <div class="buttony"><span class="button__badge">({{data.SubmittedToSecurity}})</span> </div>
+  </div>
+
+  <div>
+    <a class="link" ng-mouseover="mouseover(IsSponsored)" ng-href="x_navyn_badges_badging_request_list.do?sysparm_query=sponsored=false^u_status.u_status_id=6020">*Manage Temporary Badge Ready for Pickup At Meeting Level</a>
+    <div class="buttony"><span class="button__badge">({{data.ReadyForPickup}})</span>  </div>
+  </div>
+  <div>
+    <a class="link" ng-mouseover="mouseover(IsSponsored)" ng-href="x_navyn_badges_visitors_list.do?sysparm_query=sponsoredSTARTSWITHfalse^u_status.u_status_id=7071">*Manage Temporary Badges Issued but not Returned Back to Security</a>
+    <div class="buttony"><span class="button__badge">({{data.IssuedButNotReturned}})</span></div>
+  </div>
+  <div>
+    <a class="link" ng-mouseover="mouseover(IsSponsored)" ng-href="x_navyn_badges_visitors_list.do?sysparm_query=sponsoredSTARTSWITHfalse^u_status.u_status_id=7070">*Manage Badges Ready for Pickup at Visitor Level</a>
+    <div class="buttony"><span class="button__badge">({{data.Ready}})</span> </div>
+  </div> 
+</div>
+
+
+<div>
+  <div class="SoftFrame">Manage Sponsored Badge Requests<div><br/>
+    <div>
+      <a class="link" ng-mouseover="mouseover(IsSponsored)" ng-href="x_navyn_badges_badging_request_list.do?sysparm_query=sponsored=true^u_status.u_status_id=6061">*Manage Sponsored  Badge Requests Submitted to Security</a>
+      <div class="buttony"><span class="button__badge">({{data.sSubmittedToSecurity}})</span></div>
+    </div>
+
+    <div>
+      <a class="link" ng-mouseover="mouseover(IsSponsored)" ng-href="x_navyn_badges_badging_request_list.do?sysparm_query=sponsored=true^u_status.u_status_id=6020">*Manage Sponsored Badge Ready for Pickup</a>
+      <div class="buttony"><span class="button__badge">({{data.sReadyForPickup}})</span></div>
+    </div>
+    <div>
+      <a class="link" ng-mouseover="mouseover(IsSponsored)" ng-href="x_navyn_badges_visitors_list.do?sysparm_query=sponsored=true^u_status.u_status_id=7071">*Manage Sponsored Badges Issued but not Returned Back to Security</a>
+      <div class="buttony"><span class="button__badge">({{data.sIssuedButNotReturned}})</span>  </div>
+    </div>
+    <div>
+      <a class="link" ng-mouseover="mouseover(IsSponsored)" ng-href="x_navyn_badges_visitors_list.do?sysparm_query=sponsored=true^u_status.u_status_id=7070">*Manage Sponsored Badges Ready for Pickup</a>
+      <div class="buttony"><span class="button__badge">({{data.sReady}})</span> </div>
+    </div>
+    <div>
+      <a class="link" ng-mouseover="mouseover(IsSponsored)" ng-href="x_navyn_badges_badging_request_list.do?sysparm_query=sponsored=true^u_status.u_status_id=6076">*View Meetings Where All Badges Are Returned</a>
+      <div class="buttony"><span class="button__badge">({{data.sComplete}})</span> </div>
+    </div>
+</div>
+
+
+    <div class="SoftFrame">View the List of Daily Badges Issued to NR Employees <div><br/>
+
+
+      <div>
+        <a class="link"  ng-mouseover="getExplanation(IsActive)" ng-href="x_navyn_badges_forgetful_badge_requests_list.do">*History of Daily Badge Requests</a>
+        <div class="buttony"><span class="button__badge">({{data.localHistory}})</span>
+        </div>
+        <div>
+]]></template>
+    </sp_widget>
+</record_update>

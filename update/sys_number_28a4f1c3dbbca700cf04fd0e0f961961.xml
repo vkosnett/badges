@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_navyn_badges_badging_request">x_navyn_badges_badging_request</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>BR</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-01 17:34:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>28a4f1c3dbbca700cf04fd0e0f961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BR</sys_name>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_number_28a4f1c3dbbca700cf04fd0e0f961961</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2018-10-01 17:34:35</sys_updated_on>
+    </sys_number>
+</record_update>

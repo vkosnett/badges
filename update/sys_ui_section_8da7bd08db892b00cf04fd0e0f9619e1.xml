@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Visitors" section_id="8da7bd08db892b00cf04fd0e0f9619e1" sys_domain="global" table="x_navyn_badges_visitors" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_navyn_badges_visitors.xml</element>
+            <position>0</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>9d71f3b7dbf62340cf04fd0e0f9619a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Visitors">f13ab988db892b00cf04fd0e0f9619c9</sys_ui_formatter>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>parent</element>
+            <position>1</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5971f3b7dbf62340cf04fd0e0f9619a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>first_name</element>
+            <position>2</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>d971f3b7dbf62340cf04fd0e0f9619a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>middle_name</element>
+            <position>3</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5d71f3b7dbf62340cf04fd0e0f9619a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_name</element>
+            <position>4</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>dd71f3b7dbf62340cf04fd0e0f9619a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>social_security_number</element>
+            <position>5</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5171f3b7dbf62340cf04fd0e0f9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>phone_number</element>
+            <position>6</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>d171f3b7dbf62340cf04fd0e0f9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>organization_of_the_visitor</element>
+            <position>7</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5571f3b7dbf62340cf04fd0e0f9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>other_organization_name</element>
+            <position>8</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>d571f3b7dbf62340cf04fd0e0f9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>notes</element>
+            <position>9</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5971f3b7dbf62340cf04fd0e0f9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>asset_tag</element>
+            <position>10</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>d971f3b7dbf62340cf04fd0e0f9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_status</element>
+            <position>11</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5d71f3b7dbf62340cf04fd0e0f9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>badge_issue_date</element>
+            <position>12</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>dd71f3b7dbf62340cf04fd0e0f9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>expected_badge_return_date</element>
+            <position>13</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5171f3b7dbf62340cf04fd0e0f9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>actual_badge_return_date</element>
+            <position>14</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>d171f3b7dbf62340cf04fd0e0f9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>badge_approved_date</element>
+            <position>15</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5571f3b7dbf62340cf04fd0e0f9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>selected_badge</element>
+            <position>16</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>d571f3b7dbf62340cf04fd0e0f9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_tasker_history</element>
+            <position>17</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5971f3b7dbf62340cf04fd0e0f9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sponsored</element>
+            <position>18</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>d971f3b7dbf62340cf04fd0e0f9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_serial_number</element>
+            <position>19</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>5d71f3b7dbf62340cf04fd0e0f9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>badge_type</element>
+            <position>20</position>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2019-01-11 20:40:58</sys_created_on>
+            <sys_id>dd71f3b7dbf62340cf04fd0e0f9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Visitors" display_value="Visitors" name="x_navyn_badges_visitors" sys_domain="global" view="Default view">8da7bd08db892b00cf04fd0e0f9619e1</sys_ui_section>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2019-01-11 20:40:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Visitors</caption>
+            <header>false</header>
+            <name>x_navyn_badges_visitors</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>verda.kosnett</sys_created_by>
+            <sys_created_on>2018-10-04 20:21:39</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8da7bd08db892b00cf04fd0e0f9619e1</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>Visitors</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+            <sys_update_name>sys_ui_section_8da7bd08db892b00cf04fd0e0f9619e1</sys_update_name>
+            <sys_updated_by>verda.kosnett</sys_updated_by>
+            <sys_updated_on>2018-10-26 18:16:12</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

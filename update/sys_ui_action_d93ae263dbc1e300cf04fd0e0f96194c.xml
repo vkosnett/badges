@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>sysverb_insert</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments>d93ae263dbc1e300cf04fd0e0f96194c</comments>
+        <condition>new x_navyn_badges.ButtonDisplayRules().shouldWeDisplaySubmitTo08B();</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Submit</name>
+        <onclick/>
+        <order>300</order>
+        <script><![CDATA[var sl=new x_navyn_badges.BadgeLibrary();
+var user=gs.getUser().getDisplayName();
+var userEmail=gs.getUser().getEmail();
+var stamp=new GlideDateTime().getDisplayValue();
+var stuser=' '+user+' '+stamp+'<br/>';
+var status=new GlideRecord('u_status');
+if 	(current.u_suggested==false && status.get('u_status_id', 6061))
+	{
+	current.u_suggested=true; //used this field as it was already available. Denotes being sent to 08B
+	current.u_tasker_history="Badge Request sent to O8B Security "+stuser+"<br/>" +current.u_tasker_history;
+	current.u_changed=new GlideDate();
+	current.u_assigned_for_review_date=new GlideDate();
+	current.u_status=status.sys_id;
+	sl.closeVisitorsToSubmitterUpdate(current);
+
+}
+
+	current.update();	
+action.setRedirectURL('/x_navyn_badges_badging_request.do?sys_id='+current.sys_id);]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>verda.kosnett</sys_created_by>
+        <sys_created_on>2018-10-15 21:01:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d93ae263dbc1e300cf04fd0e0f96194c</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Submit</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Badges" source="x_navyn_badges">09e85e02db74670071acf81d0f961905</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Badges">09e85e02db74670071acf81d0f961905</sys_scope>
+        <sys_update_name>sys_ui_action_d93ae263dbc1e300cf04fd0e0f96194c</sys_update_name>
+        <sys_updated_by>verda.kosnett</sys_updated_by>
+        <sys_updated_on>2019-01-11 18:48:47</sys_updated_on>
+        <table>x_navyn_badges_badging_request</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
